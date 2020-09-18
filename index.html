@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-do App</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" integrity="sha256-h20CPZ0QyXlBuAw7A+KluUYx/3pK+c7lYEpqLTlxjYQ=" crossorigin="anonymous" />
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <div class="header">
+        <i class="fa fa-bars open-menu-button"></i>
+        <div class="header-date"></div>
+        <div class="header-time"></div>
+    </div>
+
+    <div class="container">
+        <div class="container-header">
+            <div class="manage-list">
+                <h1 class="name-list"></h1>
+                <i class="fas fa-ellipsis-v manage-list-button"></i>
+            </div>
+            <div class="info-list">
+                <p class="size-list"></p>
+            </div>
+            <div class="no-lists-available">
+                <h1>You have no lists.</h1>
+            </div>
+        </div>
+        <ul class="to-do-list"></ul>
+    </div>
+
+    <form class="form-add-to-do">
+        <input type="text" class="add-todo-input" placeholder="Add to-do">
+        <input type="submit" class="add-todo-button" value="&#10010;">
+    </form>
+
+    <div class="menu">
+        <div class="menu-content">
+            <div class="lists">
+                <h1 class="greetings-username">
+                    <span class="greetings"></span><span class="comma-or-dot"></span><br>
+                    <span class="username"></span>
+                </h1>
+                <h2 class="my-lists">My lists</h2>
+                <div class="user-lists"></div>
+            </div>
+            <div class="menu-buttons">
+                <i class="fas fa-exchange-alt switch-button"></i>
+                <button class="new-list-button">Create list</button>
+                <button class="recycle-bin-button">Recycle bin</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="manage-list-box">
+        <div class="manage-list-content">
+            <div class="manage-list-header">
+                <p>Manage your list</p>
+                <button class="close-manage-list-button">&times;</button>
+            </div>
+            <div class="manage-list-buttons">
+                <button class="rename-list-button">Rename list</button>
+                <button class="clear-completed-button">Clear completed to-dos</button>
+                <button class="clear-list-button">Clear list</button>
+                <button class="delete-list-button">Delete list</button>
+            </div>
+            <div class="rename-list-box">
+                <p>Current name:</p>
+                <h1 class="current-list-name"></h1>
+                <p>Type in the new list name</p>
+                <form class="form-rename-list">
+                    <input type="text" class="rename-list-input">
+                    <input type="submit" class="rename-list-submit" value="&#10142;">
+                </form>
+            </div>
+            <div class="delete-list-box">
+                <h1>Confirmation needed.</h1>
+                <p>List to be deleted:</p>
+                <h1 class="list-to-be-deleted"></h1>
+                <div class="delete-list-buttons">
+                    <button class="return-to-manage-list-front-page">&#10142;</button>
+                    <button class="delete-list-button-confirmation">Delete</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="create-list-box">
+        <div class="create-list-box-header">
+            <p>Create a new list</p>
+            <button class="close-create-list-button">&times;</button>
+        </div>
+        <form class="form-create-list">
+            <input type="text" class="create-list-input">
+            <input type="submit" class="create-list-button" value="&#10142;">
+        </form>
+    </div>
+
+    <div class="rename-to-do-box">
+        <div class="rename-to-do-header">
+            <p>Rename the to-do</p>
+            <button class="close-rename-to-do-button">&times;</button>
+        </div>
+        <div class="rename-to-do-info">
+            <p>Current name:</p>
+            <h1 class="current-to-do-name"></h1>
+            <p>Type in the new name</p>
+        </div>
+        <form class="form-rename-to-do">
+            <input type="text" class="rename-to-do-input">
+            <input type="submit" class="rename-to-do-button" value="&#10142;">
+        </form>
+    </div>
+
+    <div class="username-box">
+        <p>What's your first name?</p>
+        <form class="username-form">
+            <input type="text" class="username-input">
+            <div class="username-form-buttons">
+                <input type="button" class="username-close-button">
+                <input type="submit" class="username-submit-button" value="Submit">
+            </div>
+        </form>
+    </div>
+
+    <div class="recycle-bin-box">
+        <div class="recycle-bin-header">
+            <p>Recycle bin</p>
+            <button class="close-recycle-bin-button">&times;</button>
+        </div>
+        <div class="recycle-bin-front-page">
+            <h1>All my lists</h1>
+            <p class="lists-info-recycle-bin"></p>
+            <div class="lists-recycle-bin">
+                <div class="list-recycle-bin-box">
+                    <p class="list-recycle-bin"></p>
+                    <i class="restore-icon fas fa-trash-restore-alt"></i>
+                </div>
+            </div>
+            <div class="clear-recycle-bin-front-page">
+                <button class="open-clear-recycle-bin-confirmation-button">Clear recycle bin</button>
+            </div>
+        </div>
+        <div class="recycle-bin-manage">
+            <div class="recycle-bin-manage-info">
+                <p class="recycle-bin-manage-list"></p>
+                <p class="recycle-bin-manage-status"></p>
+            </div>
+            <div class="recycle-bin-manage-todos-header">
+                <h1 class="recycle-bin-todos-info"></h1>
+                <i class="check-uncheck-button far fa-square uncheck-all"></i>
+            </div>
+            <div class="recycle-bin-manage-todos">
+                <div class="recycle-bin-todo-box">
+                    <p class="recycle-bin-todo"></p>
+                    <label class="recycle-bin-label">
+                        <input class="recycle-bin-checkbox" type="checkbox">
+                        <i class="recycle-bin-checkbox-custom far fa-square"></i>
+                    </label>
+                </div>
+            </div>
+            <div class="recycle-bin-manage-buttons">
+                <div class="restore-buttons-header">
+                    <button class="return-to-recycle-bin-front-page-button">&#10142;</button>
+                    <p class="restore-options-text">Restore options</p>
+                </div>
+                <div class="restore-buttons">
+                    <button class="restore-button">Restore</button>
+                    <button class="restore-only-list-button">Restore list only</button>
+                </div>
+            </div>
+        </div>
+        <div class="clear-recycle-bin-confirmation">
+            <h1>Confirmation needed</h1>
+            <p>Would you like to permanently delete all of your lists and to-dos that are currently in the recycle bin?</p>
+            <div class="clear-recycle-bin-confirmation-buttons">
+                <button class="close-clear-recycle-bin-confirmation-button">&#10142;</button>
+                <button class="clear-recycle-bin-button">Delete</button>
+            </div>
+        </div>
+    </div>
+
+    <p class="notification"></p>
+
+</body>
+</html>
